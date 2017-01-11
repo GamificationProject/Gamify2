@@ -1,0 +1,24 @@
+{% extends 'gamification/base.html' %}
+{% block title %}Register into Gamification{% endblock %}
+{% block bodyclass %}signup-page{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="card card-signup">
+                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                    <div class="header header-info text-center">
+                        <h4>Register yourself padwan, the force is strong with you</h4>
+                    </div>
+                    <div class="content">
+                        {% csrf_token %}
+                        {% include 'gamification/form_template.html' %}
+                    <div class="footer text-center">
+                        <button type="submit" class="btn btn-info btn-lg btn-simple">GET STARTED</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

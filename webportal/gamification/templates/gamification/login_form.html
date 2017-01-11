@@ -1,0 +1,24 @@
+{% extends 'gamification/base.html' %}
+{% block title %}Gamification: Login for Fun{% endblock %}
+{% block bodyclass %}signup-page{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="card card-signup">
+                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                    <div class="header header-success text-center">
+                        <h4>LogIn and the force will stay strong with you</h4>
+                    </div>
+                    <div class="content">
+                        {% csrf_token %}
+                        {% include 'gamification/form_template.html' %}
+                    <div class="footer text-center">
+                        <button type="submit" class="btn btn-success btn-lg btn-simple">LOG IN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

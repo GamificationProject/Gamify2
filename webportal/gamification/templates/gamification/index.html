@@ -1,0 +1,17 @@
+{% extends 'gamification/base.html' %}
+{% block title %}Gamification{% endblock %}
+{% block bodyclass %}landing-page{% endblock %}
+{% block body %}
+<div class = "container">
+	{% if game_list %}
+	<h2><strong>Games</strong></h2>
+		<div class="list-group">
+		{% for game in game_list %}
+			<strong>{{ game.game_name }}</strong><sub>{{ game.game_description }}</sub>
+		{% endfor %}    
+		</div>
+	{% else %}
+	<h2><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;No Games are available at this point of time. #SorryShaktiman</h2>
+	{% endif %}
+</div>
+{% endblock %}
